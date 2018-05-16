@@ -8,6 +8,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 import com.learn.bluetooth.Adapter.BTListAdapter;
+import com.learn.bluetooth.BlueToothActivity;
 import com.learn.bluetooth.R;
 
 import java.util.ArrayList;
@@ -27,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
         items = new ArrayList<>();
         items.add("On and Off");
-        items.add("Second");
+        items.add("Scan");
         items.add("Third");
         items.add("");
         items.add("");
@@ -42,8 +43,12 @@ public class MainActivity extends AppCompatActivity {
             public void onItemClick(View v, int position) {
                 switch (position) {
                     case 0:
-                        startActivity();
+                        startActivity(OnOff.class);
                         break;
+                    case 1:
+                        startActivity(BlueToothActivity.class);
+                        break;
+
                 }
 
             }
@@ -52,8 +57,8 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void startActivity() {
-        Intent intent = new Intent(MainActivity.this, OnOff.class);
+    private void startActivity(Class classes) {
+        Intent intent = new Intent(MainActivity.this, classes);
         startActivity(intent);
     }
 }
