@@ -1,4 +1,4 @@
-package com.learn.bluetooth;
+package com.learn.bluetooth.UI;
 
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
@@ -13,6 +13,7 @@ import android.util.Log;
 import android.widget.ListView;
 
 import com.learn.bluetooth.Adapter.BlueAdapter;
+import com.learn.bluetooth.R;
 
 import java.util.ArrayList;
 

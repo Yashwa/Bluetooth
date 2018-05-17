@@ -8,7 +8,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 import com.learn.bluetooth.Adapter.BTListAdapter;
-import com.learn.bluetooth.BlueToothActivity;
 import com.learn.bluetooth.R;
 
 import java.util.ArrayList;
@@ -43,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
             public void onItemClick(View v, int position) {
                 switch (position) {
                     case 0:
-                        startActivity(OnOff.class);
+                        startActivity(OnOffActivity.class);
                         break;
                     case 1:
                         startActivity(BlueToothActivity.class);
